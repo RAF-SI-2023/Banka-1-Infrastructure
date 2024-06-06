@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: fetching-service
-  namespace: {{ .Release.Namespace }}
+  namespace: { { .Release.Namespace } }
 data:
   application.properties: |
     {
@@ -32,7 +32,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: fetching-service
-  namespace: {{ .Release.Namespace }}
+  namespace: { { .Release.Namespace } }
   labels:
     service: fetching-service
 spec:
@@ -69,17 +69,17 @@ spec:
               value: update
           resources:
             requests:
-              cpu: 1
-              memory: 1Gi
+              cpu: 300m
+              memory: 512Mi
             limits:
-              cpu: 2
+              cpu: 1
               memory: 2Gi
 ---
 apiVersion: v1
 kind: Service
 metadata:
   name: fetching-service
-  namespace: {{ .Release.Namespace }}
+  namespace: { { .Release.Namespace } }
 spec:
   selector:
     service: fetching-service
