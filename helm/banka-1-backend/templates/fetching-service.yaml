@@ -24,7 +24,8 @@ data:
       "optionsUrl":"https://query2.finance.yahoo.com/v7/finance/options/",
       "springdoc.packagesToScan": "rs.edu.raf.banka1.controller",
       "spring.devtools.restart.additional-exclude": "logs/**",
-      "dev.environment": false
+      "dev.environment": false,
+      "server.port": 8082
       }
 ---
 apiVersion: apps/v1
@@ -68,10 +69,10 @@ spec:
               value: update
           resources:
             requests:
-              cpu: 1
-              memory: 1Gi
+              cpu: 300m
+              memory: 512Mi
             limits:
-              cpu: 2
+              cpu: 1
               memory: 2Gi
 ---
 apiVersion: v1
