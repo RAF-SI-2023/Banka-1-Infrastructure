@@ -24,8 +24,13 @@ data:
       "optionsUrl":"https://query2.finance.yahoo.com/v7/finance/options/",
       "springdoc.packagesToScan": "rs.edu.raf.banka1.controller",
       "spring.devtools.restart.additional-exclude": "logs/**",
-      "dev.environment": false
-      }
+      "dev.environment": false,
+      "server.port": 8081,
+      "spring.cache.type": "redis",
+      "spring.data.redis.host": "redis",
+      "spring.data.redis.port": 6379,
+      "spring.cache.redis.time-to-live": 900000
+    }
 ---
 apiVersion: apps/v1
 kind: Deployment
