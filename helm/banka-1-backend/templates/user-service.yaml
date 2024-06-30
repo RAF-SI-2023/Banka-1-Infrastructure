@@ -20,7 +20,7 @@ data:
         "server.port": 8080,
         "front.port": 4200,
         "springdoc.packagesToScan": "rs.edu.raf.banka1.controller",
-        "spring.devtools.restart.additional-exclude": "logs/**",
+        "spring.devtools.restart.additional.exclude": "logs/**",
         "exchangeRateAPIToken": "5eb8b116c5d704eea74c42f1",
         "exchangeRateApiUrl": "https://v6.exchangerate-api.com/v6/",
         "marketServiceUrl": "http://market-service:8081"
