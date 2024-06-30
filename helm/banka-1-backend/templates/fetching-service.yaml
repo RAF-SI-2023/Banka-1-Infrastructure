@@ -23,7 +23,7 @@ data:
       "forexDailyApiUrl":"https://www.alphavantage.co/query?function=FX_DAILY",
       "optionsUrl":"https://query2.finance.yahoo.com/v7/finance/options/",
       "springdoc.packagesToScan": "rs.edu.raf.banka1.controller",
-      "spring.devtools.restart.additional-exclude": "logs/**",
+      "spring.devtools.restart.additional.exclude": "logs/**",
       "dev.environment": false,
       "server.port": 8082
       }
